@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.wernerapps.mentorme" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <application
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+
+        <!-- Surgar ORM config start -->
+        <!-- <meta-data android:name="DATABASE" android:value="ezbongo.db" /> -->
+        <!-- <meta-data android:name="VERSION" android:value="1" /> -->
+        <!-- <meta-data android:name="QUERY_LOG" android:value="true" /> -->
+        <!-- <meta-data android:name="DOMAIN_PACKAGE_NAME" android:value="com.wernerapps.ezbongo" /> -->
+        <!-- config end -->
+
+        <activity
+            android:name=".Login.LoginActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MenteeView.MenteeHome"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".MentorDetail.MentorDetail"
+            android:label="@string/app_name"
+            android:parentActivityName=".MenteeView.MenteeHome"
+            android:screenOrientation="portrait">
+        </activity>
+
+
+        <activity
+            android:name=".MentorView.MentorHome"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".MenteeDetail.MenteeDetail"
+            android:label="@string/app_name"
+            android:parentActivityName=".MentorView.MentorHome" > >
+        </activity>
+    </application>
+
+</manifest>
